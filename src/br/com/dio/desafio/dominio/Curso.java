@@ -4,10 +4,8 @@ public class Curso extends Conteudo{
 
     private Double cargaHoraria;
 
-    public Curso(String titulo, String descricao, Double cargaHoraria) {
-        super(titulo, descricao);
-        this.cargaHoraria = cargaHoraria;
-    }
+
+
 
     public Double getCargaHoraria() {
         return cargaHoraria;
@@ -31,6 +29,6 @@ public class Curso extends Conteudo{
     @Override
     public Double calcularXp() {
 
-        return XP_PADRAO + 30d;
+        return XP_PADRAO * cargaHoraria;
     }
 }
